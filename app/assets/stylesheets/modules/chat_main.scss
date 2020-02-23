@@ -1,0 +1,132 @@
+.chat-main {
+  width: calc(100vw - 300px);
+  float: right;
+
+  .main-header{
+    background-color: #ffffff;
+    height: 100px;
+    padding: 0 40px;
+    border-bottom: solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+   &__name-box{
+    display: block;
+    margin-top: 35px;
+    ul {
+      color: #333333;
+      font-size: 20px;
+     }
+    li {
+      color: #999999;
+      font-size: 12px;
+      margin-top: 15px;
+     }
+    }
+   &__edit-btn{
+     padding: 0 20px;
+     margin-top:30px;
+     border:solid 1px #38aef0;
+     position: absolute;
+     right: 40px;
+     line-height: 40px;
+    a{
+      color: #38aef0;
+      text-decoration: none;
+     } 
+   }
+}
+
+  @mixin name($fSize: 16px, $color: #333333, $fWeight: bold ){
+    color: $color;
+    font-size: $fSize;
+    font-weight: $fWeight;
+  }
+  @mixin data($fSize: 12px,$color: #999999){
+    color: $color;
+    font-size: $fSize;
+  }
+  @mixin comment($fSize: 14px,$color: #434A54,$pTop:12px){
+    font-size: $fSize;
+    color: $color;
+    padding-top: $pTop;
+  }
+
+  .main-messages{
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    padding: 0 0 0 40px;
+    &__messages_id1{
+     padding-top: 35px;
+    &__user-info {
+      margin-bottom: 12px;
+     p1 {
+       @include name();
+     }
+     p2 {
+       @include data();
+     }
+    }
+    p3 {
+      @include comment();
+    }
+  }
+  &__messages_id2{
+    padding-top: 46px;
+   &__user-info {
+     margin-bottom: 12px;
+    p1 {
+      @include name();
+    }
+    p2 {
+      @include data();
+    }
+   }
+   p3 {
+     @include comment();
+   }
+ }
+} 
+ 
+  .form{
+    background-color: #d2d2d2;
+    height: 90px;
+    padding: 20px 40px;
+   
+  form{
+    display: flex;
+    .input-box{
+      display: flex;
+      width: 100%;
+      position: relative;
+
+      &__text{
+        height: 50px;
+        width: 100%;
+        color: #434a54;
+        border-style: none;
+        padding: 0 40px 0 10px;
+      }
+      &__image{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 1.3rem;
+        &__file{
+          display: none;
+        }
+      }
+    }
+    .submit-btn{
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: #38aef0;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+}
