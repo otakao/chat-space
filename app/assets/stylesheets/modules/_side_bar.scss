@@ -29,30 +29,32 @@
    }
 }
 
-
-.side-group {
-  background-color:$mainGrayColor;
-  height:calc(100vh - 100px);
-  clear: both;
-  width:300px;
-  margin: 0;
-  padding: 0;
- .group{
-   width:100%;
-   height: 91px;
-   color: $mainWhiteColor;
-   font-weight: bold;
-   margin-bottom: 40px;
-   text-decoration: none;  
-  &__group-name{
-   line-height: 35px;
-   padding:20px 0 0 20px;
-   font-size: 15px;
-   margin-bottom: 5px;
-  }
-  &__latest-message{
-   font-size: 11px;
-   padding-left: 20px;
-  }
+ .side-groups-list{
+   background-color:$mainGrayColor;
+   height:calc(100vh - 100px);
+   clear: both;
+   width:300px;
+   margin: 0;
+   padding: 0;
+   .group {
+     width:100%;
+     height: 91px;
+     font-weight: bold;
+     margin-bottom: 40px;
+     a {
+      text-decoration: none;
+      color: $mainWhiteColor;
+    }
+     
+     &__group-name {
+       line-height: 35px;
+       padding:20px 0 0 20px;
+       font-size: 15px;
+       margin-bottom: 5px;
+     }
+     &__latest-message {
+       font-size: 11px;
+       padding-left: 20px;
+     }
+   }
  }
-}
