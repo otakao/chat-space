@@ -53,41 +53,29 @@
     padding-top: $pTop;
   }
 
-  .main-messages{
+  .messages{
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 0 0 0 40px;
-    &__messages_id1{
+    overflow: scroll;
+    .message{
       padding-top: 35px;
-    &__user-info {
-      margin-bottom: 12px;
-      p1 {
-        @include name();
-     }
-     p2 {
-       @include data();
-     }
+      .upper-message {
+        margin-bottom: 12px;
+        display: flex;
+        &__user-name {
+          @include name();
+        }
+        &__date {
+          @include data();
+          padding-left: 20px;
+        }
+      }
+      .lower-message {
+        @include comment();
+      }
     }
-    p3 {
-      @include comment();
-    }
-  }
-  &__messages_id2{
-    padding-top: 46px;
-   &__user-info {
-     margin-bottom: 12px;
-    p1 {
-      @include name();
-    }
-    p2 {
-      @include data();
-    }
-   }
-   p3 {
-     @include comment();
-   }
- }
-} 
+  } 
  
   .form{
     background-color: #d2d2d2;
